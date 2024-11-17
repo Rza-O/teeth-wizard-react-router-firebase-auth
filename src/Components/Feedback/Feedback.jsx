@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Feedback = ({ feedBackData }) => {
-    console.log(feedBackData);
+    // console.log(feedBackData);
     const {name, review, userImage} = feedBackData;
     return (
         <div className='grid grid-cols-3 w-[80%] mx-auto max-w-[1200] mt-6 gap-5'>
@@ -14,7 +14,7 @@ const Feedback = ({ feedBackData }) => {
                         <p>{new Date().toLocaleDateString()}</p>
                         </div>
                         <p>{feed.review}</p>
-                        <div className="card-actions justify-end items-center">
+                        <div className="card-actions justify-center items-center ">
                             <div className="rating">
                                 <input type="radio" name="rating-1" className="mask mask-star" />
                                 <input type="radio" name="rating-1" className="mask mask-star" defaultChecked />
@@ -22,7 +22,7 @@ const Feedback = ({ feedBackData }) => {
                                 <input type="radio" name="rating-1" className="mask mask-star" />
                                 <input type="radio" name="rating-1" className="mask mask-star" />
                             </div>
-                            <button className="btn btn-primary">Buy Now</button>
+                            {/* <button className="btn btn-primary">Buy Now</button> */}
                         </div>
                     </div>
                 </div>)
