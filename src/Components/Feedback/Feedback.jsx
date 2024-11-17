@@ -4,14 +4,14 @@ const Feedback = ({ feedBackData }) => {
     console.log(feedBackData);
     const {name, review, userImage} = feedBackData;
     return (
-        <div>
+        <div className='grid grid-cols-3 w-[80%] mx-auto max-w-[1200] mt-6 gap-5'>
             {
-                feedBackData.map(feed => <div className="card bg-base-100 w-96 shadow-xl">
-                    <div className="card-body">
+                feedBackData.map(feed => <div className="card bg-base-100 shadow-xl">
+                    <div className="card-body ">
                         <div className='flex space-x-4 items-center'>
                             <img className='w-12 h-12 rounded-badge' src={feed.userImg} alt="" />
                         <h2 className="card-title">{feed.name}</h2>
-                        <p>date</p>
+                        <p>{new Date().toLocaleDateString()}</p>
                         </div>
                         <p>{feed.review}</p>
                         <div className="card-actions justify-end items-center">
